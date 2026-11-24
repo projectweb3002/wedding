@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#641f32">
+<title>The Wedding Atelier | Wedding Invitation Brief</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+:root{--wine:#641f32;--wine2:#7d3046;--gold:#b18a52;--gold-light:#e4d0a8;--ink:#392b2b;--muted:#82736d;--paper:#fbf7f1;--line:#e8dbcc;--white:#fffdfa;--shadow:0 22px 70px rgba(67,34,36,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 12% 10%,#f5e6df 0,transparent 27%),radial-gradient(circle at 90% 85%,#efe2d0 0,transparent 25%),#f8f2eb;color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh}
+body:before,body:after{content:"";position:fixed;pointer-events:none;z-index:-1;border:1px solid rgba(177,138,82,.23);border-radius:50%;width:420px;height:420px}
+body:before{top:-260px;left:-240px}body:after{right:-270px;bottom:-270px}
+button,input,textarea,select{font:inherit}.shell{width:min(100% - 32px,900px);margin:34px auto 60px}
+.topbar{display:flex;justify-content:center;align-items:center;gap:12px;color:var(--gold);font-size:11px;letter-spacing:.22em;font-weight:700;margin:0 0 18px}
+.flower{font-size:19px;color:var(--gold)}
+.hero{position:relative;overflow:hidden;border-radius:26px 26px 0 0;min-height:260px;background:linear-gradient(115deg,rgba(45,13,26,.76),rgba(100,31,50,.65)),url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85') center 48%/cover;display:grid;place-items:center;text-align:center;padding:42px 22px;color:#fff}
+.hero:after{content:"";position:absolute;inset:13px;border:1px solid rgba(228,208,168,.75);border-radius:17px;pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:610px}.eyebrow{color:#e8d4aa;font-size:10px;letter-spacing:.25em;font-weight:700;text-transform:uppercase}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500}h1{font-size:clamp(38px,7vw,62px);line-height:1.04;margin:15px 0 12px}h1 em{font-weight:500;color:#ead5b0}.hero p{color:#f4e9df;line-height:1.7;font-size:14px;margin:0 auto;max-width:480px}
+.hero-ornament{font-size:25px;color:#e6c88d;margin-top:18px}
+.panel{background:var(--white);border:1px solid rgba(177,138,82,.25);border-top:0;border-radius:0 0 26px 26px;box-shadow:var(--shadow);overflow:hidden}
+.form-head{padding:27px clamp(20px,5vw,48px) 20px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fffdfa,#fcf8f2)}
+.head-row{display:flex;align-items:center;justify-content:space-between;gap:16px}.step-count{font-size:11px;color:var(--gold);letter-spacing:.12em;font-weight:700;text-transform:uppercase}
+.progress{display:flex;gap:7px;margin-top:19px}.progress span{height:4px;border-radius:8px;background:#eee5dc;flex:1;transition:background .35s}.progress span.active{background:var(--gold)}
+.steps-labels{display:flex;justify-content:space-between;gap:8px;margin-top:9px;color:#a39388;font-size:10px}.steps-labels .active{color:var(--wine);font-weight:700}
+.form-body{padding:clamp(22px,5vw,48px)}.step{display:none;animation:rise .45s ease}.step.active{display:block}@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.section-kicker{font-size:10px;letter-spacing:.2em;color:var(--gold);font-weight:700;text-transform:uppercase;margin-bottom:9px}
+h2{font-size:clamp(29px,4vw,38px);color:var(--wine);margin:0 0 9px}.intro{color:var(--muted);font-size:13px;line-height:1.7;margin:0 0 27px;max-width:650px}
+h3{font-size:20px;color:var(--wine);margin:26px 0 14px}.subheading{display:flex;align-items:center;gap:12px;margin:26px 0 14px}.subheading h3{margin:0}.subheading:after{content:"";height:1px;background:var(--line);flex:1}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field{min-width:0}.field.full{grid-column:1/-1}label{display:block;font-size:11px;font-weight:700;color:#594746;margin:0 0 7px}label .optional{font-weight:400;color:#a09289}
+input,textarea,select{width:100%;border:1px solid #e6d9cc;background:#fffefa;border-radius:11px;padding:13px 14px;color:var(--ink);outline:none;transition:border .2s,box-shadow .2s;font-size:13px}input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(177,138,82,.13)}textarea{min-height:92px;resize:vertical}input[type=file]{padding:10px;background:#fcf8f2;font-size:12px}input::placeholder,textarea::placeholder{color:#b4a79e}
+.hint{font-size:10px;color:#9a8a80;line-height:1.55;margin-top:6px}.family-card,.event-card,.upload-card,.review-card{border:1px solid var(--line);border-radius:15px;padding:18px;background:#fffdfa}.family-card+.family-card{margin-top:15px}.family-title{display:flex;align-items:center;gap:9px;color:var(--wine);font-family:'Playfair Display',serif;font-size:20px;margin:0 0 15px}.family-title span{font-family:'DM Sans';font-size:10px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase}
+.event-list{display:grid;gap:12px}.event-card{padding:0;overflow:hidden}.event-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 17px;background:#fcf7f0}.event-top strong{font-family:'Playfair Display',serif;font-size:19px;color:var(--wine);font-weight:500}.toggle{display:flex;align-items:center;gap:8px;font-size:11px;color:#76665e}.toggle input{width:17px;height:17px;accent-color:var(--wine)}.event-fields{padding:17px;display:none}.event-card.enabled .event-fields{display:block}.event-fields .grid{gap:12px}
+.choice-row{display:flex;flex-wrap:wrap;gap:10px}.choice{display:flex;align-items:center;gap:8px;border:1px solid var(--line);padding:12px 14px;border-radius:11px;background:#fffefa;font-size:12px;cursor:pointer}.choice input{width:auto;accent-color:var(--wine)}
+.upload-card{background:#fcf8f2;margin-bottom:15px}.upload-title{font-family:'Playfair Display',serif;color:var(--wine);font-size:19px;margin-bottom:5px}.upload-card p{font-size:11px;color:var(--muted);line-height:1.6;margin:0 0 13px}
+.notice{padding:14px 16px;border-radius:12px;background:#f4ece2;color:#766157;font-size:11px;line-height:1.65;margin-top:16px;border-left:3px solid var(--gold)}
+.review-list{display:grid;gap:10px}.review-card h4{font-family:'Playfair Display',serif;color:var(--wine);font-size:18px;font-weight:500;margin:0 0 8px}.review-card p{white-space:pre-wrap;overflow-wrap:anywhere;color:#786b64;font-size:11px;line-height:1.65;margin:0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:32px;padding-top:22px;border-top:1px solid var(--line)}.btn{border:0;border-radius:30px;padding:13px 22px;cursor:pointer;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:transform .2s,box-shadow .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--wine);color:#fff;box-shadow:0 8px 20px rgba(100,31,50,.18)}.btn-primary:hover{background:var(--wine2)}.btn-secondary{background:#f4ece3;color:var(--wine)}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.form-footer{padding:19px 24px;background:#faf5ee;text-align:center;border-top:1px solid var(--line);color:#9b897b;font-size:10px;letter-spacing:.08em}.form-footer b{color:var(--gold);font-weight:700}
+.success{display:none;text-align:center;padding:50px 20px}.success.show{display:block}.success-mark{width:62px;height:62px;border-radius:50%;background:#edf3e9;color:#47734b;display:grid;place-items:center;font-size:27px;margin:0 auto 18px}.success h2{margin-bottom:10px}.success p{color:var(--muted);font-size:13px;line-height:1.7;max-width:490px;margin:0 auto 20px}
+.error{display:none;color:#a83245;font-size:11px;margin-top:10px}.error.show{display:block}
+@media(max-width:620px){.shell{width:min(100% - 18px,900px);margin:12px auto 30px}.hero{min-height:235px;padding:35px 20px}.hero:after{inset:9px}.form-head{padding:22px 19px 16px}.form-body{padding:24px 18px}.grid{grid-template-columns:1fr;gap:13px}.field.full{grid-column:auto}.steps-labels{font-size:8px}.nav .btn{padding:12px 16px}.family-card,.upload-card{padding:15px}.event-fields{padding:14px}.event-fields .grid{grid-template-columns:1fr 1fr}.event-fields .field.full{grid-column:1/-1}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <div class="topbar"><span class="flower">✿</span> THE WEDDING ATELIER <span class="flower">✿</span></div>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">A celebration of love & togetherness</div>
+      <h1>Let's Create Your<br><em>Wedding Invitation</em></h1>
+      <p>Share a few beautiful details with us. We'll use your answers to create a personal wedding invitation website that feels as special as your celebration.</p>
+      <div class="hero-ornament">❧ ✦ ❧</div>
+    </div>
+  </header>
+
+  <section class="panel">
+    <div class="form-head" id="formHead">
+      <div class="head-row"><span class="step-count" id="stepCount">STEP 01 / 06</span><span class="step-count" id="stepName">Couple & Family</span></div>
+      <div class="progress" id="progress"><span class="active"></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="steps-labels"><span class="active">Families</span><span>Wedding</span><span>Functions</span><span>Photos</span><span>Music</span><span>Review</span></div>
+    </div>
+
+    <form id="weddingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="New Wedding Invitation Client Brief">
+      <input type="hidden" name="Form source" value="The Wedding Atelier client questionnaire">
+      <div class="form-body" id="formBody">
+        <!-- STEP 1 -->
+        <section class="step active" data-title="Couple & Family">
+          <div class="section-kicker">First, the families</div><h2>Two families, one beautiful beginning.</h2>
+          <p class="intro">Please enter names exactly as you want them displayed on the invitation. Double-check spelling before moving ahead.</p>
+          <div class="family-card">
+            <div class="family-title">✦ The Groom's Family <span>Groom</span></div>
+            <div class="grid">
+              <div class="field full"><label for="groom_name">Groom's full name *</label><input id="groom_name" name="Groom full name" required placeholder="e.g. Aarav Sharma"></div>
+              <div class="field"><label for="groom_father">Groom's father's name *</label><input id="groom_father" name="Groom father name" required placeholder="Father's full name"></div>
+              <div class="field"><label for="groom_mother">Groom's mother's name *</label><input id="groom_mother" name="Groom mother name" required placeholder="Mother's full name"></div>
+            </div>
+          </div>
+          <div class="family-card">
+            <div class="family-title">✦ The Bride's Family <span>Bride</span></div>
+            <div class="grid">
+              <div class="field full"><label for="bride_name">Bride's full name *</label><input id="bride_name" name="Bride full name" required placeholder="e.g. Ananya Jangid"></div>
+              <div class="field"><label for="bride_father">Bride's father's name *</label><input id="bride_father" name="Bride father name" required placeholder="Father's full name"></div>
+              <div class="field"><label for="bride_mother">Bride's mother's name *</label><input id="bride_mother" name="Bride mother name" required placeholder="Mother's full name"></div>
+            </div>
+          </div>
+          <div class="field" style="margin-top:16px"><label for="family_closing">Family closing message <span class="optional">(optional)</span></label><input id="family_closing" name="Family closing message" placeholder="With love, the Sharma and Jangid families"></div>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="step" data-title="Wedding Details">
+          <div class="section-kicker">The main celebration</div><h2>The day we've been waiting for.</h2>
+          <p class="intro">Share the main ceremony details. These will be used for the invitation, countdown and location sections.</p>
+          <div class="grid">
+            <div class="field"><label for="wedding_date">Wedding date *</label><input type="date" id="wedding_date" name="Wedding date" required></div>
+            <div class="field"><label for="muhurat">Muhurat time *</label><input type="time" id="muhurat" name="Muhurat time" required></div>
+            <div class="field full"><label for="venue">Wedding venue name *</label><input id="venue" name="Wedding venue name" required placeholder="Venue, resort, palace or banquet name"></div>
+            <div class="field full"><label for="address">Complete wedding address *</label><textarea id="address" name="Complete wedding address" required placeholder="Building / venue, road, area, city, state, PIN code"></textarea></div>
+            <div class="field full"><label for="maps">Google Maps link</label><input type="url" id="maps" name="Google Maps link" placeholder="https://maps.app.goo.gl/..."><div class="hint">Open Google Maps → select the venue → Share → Copy link.</div></div>
+          </div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="step" data-title="Wedding Functions">
+          <div class="section-kicker">The celebrations</div><h2>Every ceremony has its own magic.</h2>
+          <p class="intro">Select only the functions you want included. Open each selected function and fill in its details. You can leave unneeded functions unchecked.</p>
+          <div class="event-list" id="eventList"></div>
+          <div class="notice">If a function takes place at the main wedding venue, you can enter “Same as wedding venue”. Please include the date and time for every selected function.</div>
+        </section>
+
+        <!-- STEP 4 -->
+        <section class="step" data-title="Photographs">
+          <div class="section-kicker">Memories & moments</div><h2>Let's tell your story in pictures.</h2>
+          <p class="intro">Tell us about the photographs you want included in the “Our Story” gallery.</p>
+          <div class="grid">
+            <div class="field"><label for="photo_count">Number of photographs</label><input type="number" min="0" id="photo_count" name="Number of photographs" placeholder="e.g. 12"></div>
+            <div class="field"><label for="photo_order">Photo 1 for opening background</label><input id="photo_order" name="Opening background photo description" placeholder="e.g. Couple portrait in traditional outfits"></div>
+            <div class="field full"><label for="photo_captions">Special photo order or caption instructions</label><textarea id="photo_captions" name="Photo order and caption instructions" placeholder="Any preferred order, names, dates or captions?"></textarea></div>
+          </div>
+          <div class="upload-card" style="margin-top:17px">
+            <div class="upload-title">Upload your photographs</div><p>Select the photographs you'd like us to use. If you have many large files, sharing a Google Drive folder link may work better.</p>
+            <input type="file" name="Wedding photographs" id="photos" accept="image/*" multiple>
+            <div class="hint">Upload availability and file-size limits depend on your Formspree plan. You can also share a Drive link below.</div>
+          </div>
+          <div class="field"><label for="photo_drive">Google Drive / photo folder link <span class="optional">(recommended for large galleries)</span></label><input type="url" id="photo_drive" name="Photo folder link" placeholder="Paste a shareable Google Drive link"></div>
+          <div class="notice">Please share original, high-resolution images. Label or identify the first photo clearly; it will be used behind the couple's names on the opening screen.</div>
+        </section>
+
+        <!-- STEP 5 -->
+        <section class="step" data-title="Music & Language">
+          <div class="section-kicker">Set the mood</div><h2>A song, a language, a feeling.</h2>
+          <p class="intro">Choose how the invitation should sound and which language should be used throughout the website.</p>
+          <div class="subheading"><h3>Background music</h3></div>
+          <div class="choice-row">
+            <label class="choice"><input type="radio" name="Music option" value="I will upload an MP3" checked> I will provide an MP3</label>
+            <label class="choice"><input type="radio" name="Music option" value="Use a YouTube link"> Use a YouTube link</label>
+            <label class="choice"><input type="radio" name="Music option" value="No music"> No music</label>
+          </div>
+          <div class="grid" style="margin-top:16px">
+            <div class="field full"><label for="youtube">YouTube song link <span class="optional">(if selected)</span></label><input type="url" id="youtube" name="YouTube song link" placeholder="https://www.youtube.com/watch?v=..."></div>
+            <div class="field full"><label for="song_name">Song name / artist <span class="optional">(optional)</span></label><input id="song_name" name="Song name and artist" placeholder="Song title and singer"></div>
+          </div>
+          <div class="upload-card" style="margin-top:17px">
+            <div class="upload-title">Upload your MP3</div><p>If you selected MP3, attach the audio file here. Music will begin after the guest interacts with the invitation, as mobile browsers may block autoplay.</p>
+            <input type="file" id="mp3" name="Wedding music MP3" accept="audio/mpeg,audio/mp3,audio/*">
+          </div>
+          <div class="subheading"><h3>Invitation language</h3></div>
+          <div class="choice-row">
+            <label class="choice"><input type="radio" name="Invitation language" value="English" checked> English</label>
+            <label class="choice"><input type="radio" name="Invitation language" value="Hindi"> Hindi</label>
+            <label class="choice"><input type="radio" name="Invitation language" value="Hinglish"> Hinglish</label>
+          </div>
+          <div class="subheading"><h3>Personal touches</h3></div>
+          <div class="grid">
+            <div class="field full"><label for="special_message">Special message, traditions or personal requirements</label><textarea id="special_message" name="Special message and personal requirements" placeholder="Any family traditions, preferred wording, religious details, pronunciation notes or special requests?"></textarea></div>
+          </div>
+        </section>
+
+        <!-- STEP 6 -->
+        <section class="step" data-title="Review & Submit">
+          <div class="section-kicker">One final look</div><h2>Review your wedding brief.</h2>
+          <p class="intro">Please check the information below. When you submit, your answers will be sent to the email connected to your Formspree form.</p>
+          <div class="review-list" id="reviewList"></div>
+          <div class="notice">By submitting, you confirm that the details are accurate to the best of your knowledge. You can contact your designer later if any wedding detail changes.</div>
+          <p class="error" id="submitError">Something went wrong. Please check your connection and try again.</p>
+        </section>
+
+        <div class="nav" id="nav">
+          <button type="button" class="btn btn-secondary" id="backBtn" disabled>← Back</button>
+          <button type="button" class="btn btn-primary" id="nextBtn">Continue <span>→</span></button>
+          <button type="submit" class="btn btn-primary" id="submitBtn" style="display:none">Send Wedding Details ✦</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="success" id="success">
+      <div class="success-mark">✓</div>
+      <div class="section-kicker">Details received</div>
+      <h2>Thank you for sharing your story.</h2>
+      <p>Your wedding information has been submitted successfully. Your designer will review the details and get in touch if anything needs clarification.</p>
+      <div class="hero-ornament" style="color:var(--gold)">❧ ✦ ❧</div>
+    </div>
+    <footer class="form-footer">CRAFTED WITH <b>LOVE</b> · THE WEDDING ATELIER</footer>
+  </section>
+</main>
+<script>
+const eventNames = ["Mata Pujan","Haldi","Mehendi","Sangeet","Baraat","Wedding and Pheras","Reception"];
+const eventList = document.getElementById("eventList");
+eventNames.forEach((name,i)=>{
+  const slug=name.toLowerCase().replaceAll(" ","_").replaceAll("&","");
+  const card=document.createElement("div");
+  card.className="event-card";
+  card.innerHTML=`<div class="event-top"><strong>${name}</strong><label class="toggle"><input type="checkbox" class="event-toggle" data-index="${i}"> Include this function</label></div>
+  <div class="event-fields"><div class="grid">
+  <div class="field"><label>Date *</label><input type="date" name="${name} - Date" data-required-event></div>
+  <div class="field"><label>Time *</label><input type="time" name="${name} - Time" data-required-event></div>
+  <div class="field full"><label>Venue *</label><input name="${name} - Venue" placeholder="Venue name or Same as wedding venue" data-required-event></div>
+  <div class="field"><label>Dress code</label><input name="${name} - Dress code" placeholder="e.g. Traditional attire"></div>
+  <div class="field"><label>Theme colour</label><input name="${name} - Theme colour" placeholder="e.g. Yellow and white"></div>
+  </div></div>`;
+  eventList.appendChild(card);
+  const toggle=card.querySelector(".event-toggle");
+  toggle.addEventListener("change",()=>{
+    card.classList.toggle("enabled",toggle.checked);
+    card.querySelectorAll("[data-required-event]").forEach(el=>el.required=toggle.checked);
+  });
+});
+const form=document.getElementById("weddingForm");
+const steps=[...document.querySelectorAll(".step")];
+const labels=[...document.querySelectorAll(".steps-labels span")];
+const progress=[...document.querySelectorAll(".progress span")];
+const stepCount=document.getElementById("stepCount");
+const stepName=document.getElementById("stepName");
+const backBtn=document.getElementById("backBtn");
+const nextBtn=document.getElementById("nextBtn");
+const submitBtn=document.getElementById("submitBtn");
+const nav=document.getElementById("nav");
+let current=0;
+function showStep(index){
+  current=index;
+  steps.forEach((s,i)=>s.classList.toggle("active",i===index));
+  labels.forEach((l,i)=>l.classList.toggle("active",i===index));
+  progress.forEach((p,i)=>p.classList.toggle("active",i<=index));
+  stepCount.textContent=`STEP ${String(index+1).padStart(2,"0")} / 06`;
+  stepName.textContent=steps[index].dataset.title;
+  backBtn.disabled=index===0;
+  nextBtn.style.display=index===steps.length-1?"none":"inline-flex";
+  submitBtn.style.display=index===steps.length-1?"inline-flex":"none";
+  if(index===steps.length-1) buildReview();
+  document.getElementById("formHead").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function validateStep(){
+  const fields=[...steps[current].querySelectorAll("input,textarea,select")].filter(el=>el.required && el.type!=="checkbox" && el.type!=="radio");
+  for(const field of fields){
+    if(!field.checkValidity()){
+      field.reportValidity();
+      field.focus({preventScroll:false});
+      return false;
+    }
+  }
+  return true;
+}
+nextBtn.addEventListener("click",()=>{if(validateStep())showStep(Math.min(current+1,steps.length-1));});
+backBtn.addEventListener("click",()=>showStep(Math.max(current-1,0)));
+function buildReview(){
+  const review=document.getElementById("reviewList");
+  const groups=[
+    ["Couple & family",["Groom full name","Groom father name","Groom mother name","Bride full name","Bride father name","Bride mother name","Family closing message"]],
+    ["Wedding details",["Wedding date","Muhurat time","Wedding venue name","Complete wedding address","Google Maps link"]],
+    ["Photographs",["Number of photographs","Opening background photo description","Photo order and caption instructions","Photo folder link"]],
+    ["Music & preferences",["Music option","YouTube song link","Song name and artist","Invitation language","Special message and personal requirements"]]
+  ];
+  const valueFor=name=>{
+    const el=[...form.elements].find(e=>e.name===name && e.type!=="file");
+    return el?(el.value||"Not provided"):"Not provided";
+  };
+  let html="";
+  groups.forEach(([title,names])=>{
+    html+=`<div class="review-card"><h4>${title}</h4><p>${names.map(n=>`${n}: ${valueFor(n)}`).join("\n")}</p></div>`;
+  });
+  const chosen=eventNames.map(name=>{
+    const checkbox=[...document.querySelectorAll(".event-card")].find(c=>c.querySelector("strong").textContent===name)?.querySelector(".event-toggle");
+    if(!checkbox?.checked)return null;
+    const vals=[...document.querySelectorAll(".event-card")].find(c=>c.querySelector("strong").textContent===name);
+    return name+": "+[...vals.querySelectorAll("input:not([type=checkbox])")].map(el=>`${el.name.split(" - ")[1]}: ${el.value||"Not provided"}`).join(" | ");
+  }).filter(Boolean);
+  html+=`<div class="review-card"><h4>Selected functions (${chosen.length})</h4><p>${chosen.length?chosen.join("\n\n"):"No additional functions selected"}</p></div>`;
+  const fileNames=[...document.querySelectorAll('input[type="file"]')].map(el=>`${el.name}: ${[...el.files].map(f=>f.name).join(", ")||"No file attached"}`).join("\n");
+  html+=`<div class="review-card"><h4>Attachments</h4><p>${fileNames}</p></div>`;
+  review.innerHTML=html;
+}
+form.addEventListener("submit",async e=>{
+  e.preventDefault();
+  if(!validateStep())return;
+  const endpoint=form.getAttribute("action");
+  if(endpoint.includes("YOUR_FORM_ID")){
+    document.getElementById("submitError").textContent="Before accepting submissions, replace YOUR_FORM_ID in the form action with your Formspree form ID.";
+    document.getElementById("submitError").classList.add("show");
+    return;
+  }
+  submitBtn.disabled=true;submitBtn.textContent="Sending details…";
+  document.getElementById("submitError").classList.remove("show");
+  try{
+    const response=await fetch(endpoint,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});
+    if(response.ok){
+      document.getElementById("formBody").style.display="none";
+      document.getElementById("formHead").style.display="none";
+      document.getElementById("success").classList.add("show");
+      document.getElementById("success").scrollIntoView({behavior:"smooth",block:"center"});
+    }else{
+      const data=await response.json().catch(()=>({}));
+      throw new Error(data.errors?.map(x=>x.message).join(", ")||"Submission failed");
+    }
+  }catch(err){
+    const error=document.getElementById("submitError");
+    error.textContent=err.message||"Something went wrong. Please try again.";
+    error.classList.add("show");
+    submitBtn.disabled=false;submitBtn.textContent="Send Wedding Details ✦";
+  }
+});
+</script>
+</body>
+</html>
